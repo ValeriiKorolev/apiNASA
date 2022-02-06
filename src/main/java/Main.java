@@ -32,6 +32,7 @@ public class Main {
 
         // сохраняем в объект класса ResponceNASA
         String body = new String(response.getEntity().getContent().readAllBytes(), StandardCharsets.UTF_8);
+        System.out.println(body);
         ResponceNASA responceNASA = mapper.readValue(body, ResponceNASA.class);
         System.out.println(responceNASA);
 
